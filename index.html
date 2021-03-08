@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Mindgrub reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/mindgrub.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class='footer'>
+				<div class="left">
+					<a href="https://www.mindgrub.com"><img src="assets/mindgrub-logo.png"/></a>
+				</div>
+				<div class="right">
+					<span><a href="https://www.drupal.org/u/aczietlow">Chris Zietlow</a></span>
+					<span><a href="http://aczietlow.github.io/behat/">Intro to Behat</a></span>
+					<span><a href="https://twitter.com/aczietlow">@aczietlow</a></span>
+				</div>
+			</div>
+			<div class="slides">
+				<section>
+					<section>
+						<h2>Amazon Web Services</h2>
+						<h5>From online book store start to dominating the Internet</h5>
+					</section>
+					<section>
+						<img data-src="assets/chris_z2.jpg" alt="Mug shot of Chris Z" width="75%"/>
+						<h2><a href="https://twitter.com/aczietlow">@aczietlow</a></h2>
+						<span>Engineer Manager, <a href="https://www.mindgrub.com">Mindgrub</a></span>
+					</section>
+				</section>
+				<section>Biz intro</section>
+				<section>
+					<section>
+						<h2>The cloud solves all our problems?</h2>
+						<img data-src="assets/cloud.png" alt="Cloud"/>
+					</section>
+					<section>
+						<img data-src="assets/aws_services.png" alt="Cloud"/>
+					</section>
+				</section>
+				<section>
+					<h2>Lightsail</h2>
+					<img data-src="assets/lightsail_robot.png" alt="Cloud"/>
+				</section>
+				<section>
+					<h2>Building things not on the rails in the cloud</h2>
+					<h5>AWS Well Architected Framework</h5>
+					<p><a href="https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc">Link</a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/jquery-3.3.1.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/mindgrub.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		<script>
+            // displayed upon load, hides when slide changes
+            Reveal.addEventListener('slidechanged', function(event) {
+                document.querySelector('.reveal .footer').style.display = 'none';
+            });
+		</script>
+	</body>
+</html>

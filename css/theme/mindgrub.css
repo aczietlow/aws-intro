@@ -170,6 +170,14 @@ body {
   max-height: 400px;
   word-wrap: normal; }
 
+.reveal table, td, tr {
+  border: 1px solid;
+}
+
+.reveal table td {
+  border: 1px solid;
+}
+
 .reveal table {
   margin: auto;
   border-collapse: collapse;
